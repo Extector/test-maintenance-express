@@ -15,12 +15,12 @@ export class PartController {
 		private readonly returnPartsUseCase: ReturnPartsUseCase,
 	) {}
 
-	@Get("parts")
+	@Get()
 	async listParts() {
 		return this.listPartsUseCase.execute();
 	}
 
-	@Post("parts")
+	@Post()
 	@HttpCode(201)
 	async createPart(
 		@Body()
@@ -39,7 +39,7 @@ export class PartController {
 		});
 	}
 
-	@Post("parts/add")
+	@Post("add")
 	@HttpCode(200)
 	async addPartsSupply(
 		@Body()
@@ -56,7 +56,7 @@ export class PartController {
 		await this.addPartsSupplyUseCase.execute({ partsSupply: body.partsSupply });
 	}
 
-	@Post("parts/remove")
+	@Post("remove")
 	@HttpCode(200)
 	async removeParts(
 		@Body()
@@ -71,7 +71,7 @@ export class PartController {
 		});
 	}
 
-	@Post("parts/return")
+	@Post("return")
 	@HttpCode(200)
 	async returnParts(
 		@Body()

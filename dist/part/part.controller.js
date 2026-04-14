@@ -58,13 +58,13 @@ let PartController = class PartController {
 };
 exports.PartController = PartController;
 __decorate([
-    (0, common_1.Get)("parts"),
+    (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], PartController.prototype, "listParts", null);
 __decorate([
-    (0, common_1.Post)("parts"),
+    (0, common_1.Post)(),
     (0, common_1.HttpCode)(201),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
@@ -72,7 +72,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], PartController.prototype, "createPart", null);
 __decorate([
-    (0, common_1.Post)("parts/add"),
+    (0, common_1.Post)("add"),
     (0, common_1.HttpCode)(200),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
@@ -80,7 +80,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], PartController.prototype, "addPartsSupply", null);
 __decorate([
-    (0, common_1.Post)("parts/remove"),
+    (0, common_1.Post)("remove"),
     (0, common_1.HttpCode)(200),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
@@ -88,7 +88,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], PartController.prototype, "removeParts", null);
 __decorate([
-    (0, common_1.Post)("parts/return"),
+    (0, common_1.Post)("return"),
     (0, common_1.HttpCode)(200),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),

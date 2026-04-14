@@ -10,7 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LedgerOperation = void 0;
-require("reflect-metadata");
 const typeorm_1 = require("typeorm");
 const ledger_entry_entity_1 = require("../ledger-entry/ledger-entry.entity");
 let LedgerOperation = class LedgerOperation {

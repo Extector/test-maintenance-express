@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Lot } from "../lot/lot.entity";
 

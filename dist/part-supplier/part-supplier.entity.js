@@ -10,7 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PartSupplier = void 0;
-require("reflect-metadata");
 const typeorm_1 = require("typeorm");
 const lot_entity_1 = require("../lot/lot.entity");
 let PartSupplier = class PartSupplier {
