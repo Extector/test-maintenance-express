@@ -1,16 +1,14 @@
 import "reflect-metadata";
-import AppDataSource from "./database/data-source";
-
-import { createServer } from "./server";
+import { ConfigService } from "@nestjs/config";
+import { NestFactory } from "@nestjs/core";
+import { AppModule } from "./app.module";
 
 async function bootstrap() {
-	await AppDataSource.initialize();
-	console.log("Database initialized");
-
-	const app = createServer();
-	app.listen(3000, () => {
-		console.log("Server is running on port 3000");
-	});
+	const app = await NestFactory.create(AppModule);
+	const config = app.get(ConfigService);
+	app.setGlobalPrefix("api/v1");
+	const port = config.get<number>("PORT") ?? 3000;
+	await app.listen(port);
 }
 
 bootstrap();

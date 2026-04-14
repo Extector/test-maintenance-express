@@ -2,10 +2,10 @@
 	"name": "stock-poc",
 	"version": "1.0.0",
 	"description": "",
-	"main": "main.ts",
+	"main": "dist/main.js",
 	"scripts": {
-		"dev": "tsx watch src/main.ts",
-		"build": "tsc",
+		"dev": "nest start --watch",
+		"build": "nest build",
 		"start": "node dist/main.js",
 		"migration:generate": "NODE_OPTIONS='--import tsx' sh -c 'typeorm migration:generate -d ./src/database/data-source.ts ./src/database/migrations/$1' _",
 		"migration:create": "NODE_OPTIONS='--import tsx' sh -c 'typeorm migration:create ./src/database/migrations/$1' _",
@@ -13,21 +13,25 @@
 		"migration:revert": "NODE_OPTIONS='--import tsx' typeorm migration:revert -d ./src/database/data-source.ts",
 		"lint": "biome check --write"
 	},
-
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"type": "commonjs",
-
 	"dependencies": {
-		"express": "^5.2.1",
+		"@nestjs/common": "^11.1.19",
+		"@nestjs/config": "^4.0.4",
+		"@nestjs/core": "^11.1.19",
+		"@nestjs/platform-express": "^11.1.19",
+		"@nestjs/typeorm": "^11.0.1",
+		"joi": "^18.1.2",
 		"pg": "^8.20.0",
 		"reflect-metadata": "^0.2.2",
+		"rxjs": "^7.8.2",
 		"typeorm": "^0.3.28"
 	},
-
 	"devDependencies": {
-		"@types/express": "^5.0.6",
+		"@biomejs/biome": "^2.4.11",
+		"@nestjs/cli": "^11.0.19",
 		"@types/node": "^25.6.0",
 		"tsx": "^4.21.0",
 		"typescript": "^6.0.2"
