@@ -2,22 +2,22 @@ import { Module } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { AppConfigModule } from "./config/app-config.module";
-import { LedgerEntry } from "./ledger-entry/ledger-entry.entity";
-import { LedgerEntryModule } from "./ledger-entry/ledger-entry.module";
-import { LedgerOperation } from "./ledger-operation/ledger-operation.entity";
-import { LedgerOperationModule } from "./ledger-operation/ledger-operation.module";
-import { Lot } from "./lot/lot.entity";
-import { LotModule } from "./lot/lot.module";
-import { Part } from "./part/part.entity";
-import { PartModule } from "./part/part.module";
-import { PartCategory } from "./part-category/part-category.entity";
-import { PartCategoryModule } from "./part-category/part-category.module";
-import { PartManufacturer } from "./part-manufacturer/part-manufacturer.entity";
-import { PartManufacturerModule } from "./part-manufacturer/part-manufacturer.module";
-import { PartSupplier } from "./part-supplier/part-supplier.entity";
-import { PartSupplierModule } from "./part-supplier/part-supplier.module";
-import { VehicleModel } from "./vehicle-model/vehicle-model.entity";
-import { VehicleModelModule } from "./vehicle-model/vehicle-model.module";
+import { LedgerEntry } from "./modules/ledger-entry/ledger-entry.entity";
+import { LedgerEntryModule } from "./modules/ledger-entry/ledger-entry.module";
+import { LedgerOperation } from "./modules/ledger-operation/ledger-operation.entity";
+import { LedgerOperationModule } from "./modules/ledger-operation/ledger-operation.module";
+import { Lot } from "./modules/lot/lot.entity";
+import { LotModule } from "./modules/lot/lot.module";
+import { PartCategory } from "./modules/part-category/part-category.entity";
+import { PartCategoryModule } from "./modules/part-category/part-category.module";
+import { PartManufacturer } from "./modules/part-manufacturer/part-manufacturer.entity";
+import { PartManufacturerModule } from "./modules/part-manufacturer/part-manufacturer.module";
+import { PartSupplier } from "./modules/part-supplier/part-supplier.entity";
+import { PartSupplierModule } from "./modules/part-supplier/part-supplier.module";
+import { Part } from "./modules/part/part.entity";
+import { PartModule } from "./modules/part/part.module";
+import { VehicleModel } from "./modules/vehicle-model/vehicle-model.entity";
+import { VehicleModelModule } from "./modules/vehicle-model/vehicle-model.module";
 
 @Module({
 	imports: [

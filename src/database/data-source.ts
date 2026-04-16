@@ -1,14 +1,14 @@
-import "reflect-metadata";
 import path from "node:path";
+import "reflect-metadata";
 import { DataSource } from "typeorm";
-import { LedgerEntry } from "../ledger-entry/ledger-entry.entity";
-import { LedgerOperation } from "../ledger-operation/ledger-operation.entity";
-import { Lot } from "../lot/lot.entity";
-import { Part } from "../part/part.entity";
-import { PartCategory } from "../part-category/part-category.entity";
-import { PartManufacturer } from "../part-manufacturer/part-manufacturer.entity";
-import { PartSupplier } from "../part-supplier/part-supplier.entity";
-import { VehicleModel } from "../vehicle-model/vehicle-model.entity";
+import { LedgerEntry } from "../modules/ledger-entry/ledger-entry.entity";
+import { LedgerOperation } from "../modules/ledger-operation/ledger-operation.entity";
+import { Lot } from "../modules/lot/lot.entity";
+import { PartCategory } from "../modules/part-category/part-category.entity";
+import { PartManufacturer } from "../modules/part-manufacturer/part-manufacturer.entity";
+import { PartSupplier } from "../modules/part-supplier/part-supplier.entity";
+import { Part } from "../modules/part/part.entity";
+import { VehicleModel } from "../modules/vehicle-model/vehicle-model.entity";
 
 const AppDataSource = new DataSource({
 	type: "postgres",

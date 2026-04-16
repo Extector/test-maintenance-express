@@ -11,7 +11,9 @@
 		"migration:create": "NODE_OPTIONS='--import tsx' sh -c 'typeorm migration:create ./src/database/migrations/$1' _",
 		"migration:run": "NODE_OPTIONS='--import tsx' typeorm migration:run -d ./src/database/data-source.ts",
 		"migration:revert": "NODE_OPTIONS='--import tsx' typeorm migration:revert -d ./src/database/data-source.ts",
-		"lint": "biome check --write"
+		"lint": "biome check --write",
+		"test": "jest",
+		"test:watch": "jest --watch"
 	},
 	"keywords": [],
 	"author": "",
@@ -32,7 +34,13 @@
 	"devDependencies": {
 		"@biomejs/biome": "^2.4.11",
 		"@nestjs/cli": "^11.0.19",
+		"@nestjs/testing": "^11.1.19",
+		"@types/jest": "^30.0.0",
 		"@types/node": "^25.6.0",
+		"@types/supertest": "^7.2.0",
+		"jest": "^30.3.0",
+		"supertest": "^7.2.2",
+		"ts-jest": "^29.4.9",
 		"tsx": "^4.21.0",
 		"typescript": "^6.0.2"
 	}
